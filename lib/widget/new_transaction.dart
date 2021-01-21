@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import './user_transaction.dart';
 
 class NewTransaction extends StatelessWidget {
+  final Function newTx;
   final titleController = TextEditingController();
   final amountController = TextEditingController();
+
+  NewTransaction(this.newTx);
   @override
   Widget build(BuildContext context) {
     return Card(
