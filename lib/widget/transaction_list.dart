@@ -1,27 +1,9 @@
 import 'package:PersonalExpenses/models/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import './user_transaction.dart';
 
-class TransactionList extends StatefulWidget {
-  @override
-  _TransactionListState createState() => _TransactionListState();
-}
-
-class _TransactionListState extends State<TransactionList> {
-  final List<Transaction> _userTransactions = [
-    Transaction(
-      id: "1",
-      name: "Clothes",
-      amount: 1200,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: "2",
-      name: "Shoes",
-      amount: 1400,
-      date: DateTime.now(),
-    ),
-  ];
+class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

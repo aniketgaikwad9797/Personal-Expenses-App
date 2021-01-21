@@ -45,8 +45,6 @@ class MyHomePage extends StatelessWidget {
               color: Colors.amberAccent,
             ),
           ),
-          NewTransaction(),
-          TransactionList(),
         ],
       ),
     );
