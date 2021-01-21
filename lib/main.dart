@@ -1,7 +1,7 @@
 import './widget/new_transaction.dart';
 import './widget/transaction_list.dart';
 import 'package:flutter/material.dart';
-
+import './widget/user_transaction.dart';
 
 
 void main() {
@@ -45,8 +45,9 @@ class MyHomePage extends StatelessWidget {
               color: Colors.amberAccent,
             ),
           ),
+          UserTransaction(),
         ],
-      ),
+      ),  
     );
   }
 }
