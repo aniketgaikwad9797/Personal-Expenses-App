@@ -1,7 +1,7 @@
-import 'package:PersonalExpenses/transaction.dart';
+import 'package:PersonalExpenses/models/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import './transaction.dart';
+import 'models/transaction.dart';
 
 void main() {
   runApp(MyApp());
@@ -60,7 +60,7 @@ class MyHomePage extends StatelessWidget {
           ),
           Card(
             child: Container(
-              padding: EdgeInsets.fromLTRB(50, 0, 50, 10),
+              padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
