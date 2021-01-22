@@ -8,8 +8,15 @@ class NewTransaction extends StatelessWidget {
   NewTransaction(this.newTx);
 
   void submitInfo() {
-    titleController.text;
-    double.parse(amountController.text);
+    final enteredText = titleController.text;
+    final enteredAmount = double.parse(amountController.text);
+
+    if (enteredText.isEmpty || enteredAmount < 0) return;
+
+    newTx(
+      enteredText,
+      enteredAmount,
+    );
   }
 
   @override
@@ -28,14 +35,14 @@ class NewTransaction extends StatelessWidget {
               //   titleInput = titleValue;
               //   },
               controller: titleController,
-              onSubmitted: (_) => submitInfo,
+              onSubmitted: (_) => submitInfo(),
             ),
             TextField(
               decoration: InputDecoration(
                 labelText: "Amount",
               ),
               keyboardType: TextInputType.number,
-              onSubmitted: (_) => submitInfo,
+              onSubmitted: (_) => submitInfo(),
               // onChanged: (amountValue) => amountinput = amountValue,
               controller: amountController,
             ),
