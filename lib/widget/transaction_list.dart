@@ -28,7 +28,7 @@ class TransactionList extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    "Rs: ${transactions[index].amount}", //String Interpolation
+                    "Rs: ${transactions[index].amount.toStringAsFixed(2)}", //String Interpolation
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
