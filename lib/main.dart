@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import './widget/user_transaction.dart';
-
 
 void main() {
   runApp(MyApp());
@@ -18,6 +16,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 /*Adding comments here*/
 class MyHomePage extends StatelessWidget {
   //var formattedDate = DateFormat.yMd();
@@ -31,22 +30,24 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Flutter App"),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            width: double.infinity,
-            child: Card(
-              child: Text(
-                "The main chart",
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              width: double.infinity,
+              child: Card(
+                child: Text(
+                  "The main chart",
+                ),
+                elevation: 10,
+                color: Colors.amberAccent,
               ),
-              elevation: 10,
-              color: Colors.amberAccent,
             ),
-          ),
-          UserTransaction(),
-        ],
-      ),  
+            UserTransaction(),
+          ],
+        ),
+      ),
     );
   }
 }
