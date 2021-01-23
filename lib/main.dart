@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,    //alternate is primaryColor but only one shade 
         accentColor: Colors.cyanAccent, 
         fontFamily: 'OpenSans',
-        textTheme: ThemeData.light().textTheme.copyWith(caption:  TextStyle(fontFamily: 'OpenSans',),
+        textTheme: ThemeData.light().textTheme.copyWith(headline6:  TextStyle(fontFamily: 'OpenSans',),
       ),        
       ),
       debugShowCheckedModeBanner: false,
