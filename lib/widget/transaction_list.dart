@@ -42,11 +42,7 @@ class TransactionList extends StatelessWidget {
                     Container(
                       child: Text(
                         transactions[index].name,
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                        ),
+                        style: Theme.of(context).textTheme.headline6,
                       ),
                     ),
                     Container(

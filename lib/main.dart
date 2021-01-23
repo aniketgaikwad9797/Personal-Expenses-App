@@ -23,6 +23,13 @@ class MyApp extends StatelessWidget {
             Colors.orange, //alternate is primaryColor but only one shade
         accentColor: Colors.cyanAccent,
         fontFamily: 'BodoniModa',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+              fontFamily: 'BodoniModa',
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              fontStyle: FontStyle.italic,
+            )),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
