@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(),
       theme: ThemeData(
         primarySwatch: Colors.orange, 
-        accentColor: Colors.cyanAccent,   //alternate is primaryColor but only on shade 
+        accentColor: Colors.cyanAccent, 
+        fontFamily: 'Ouicksand-Light'  //alternate is primaryColor but only on shade 
       ),         //ThemeData is not a widget but a class provided by flutter
       debugShowCheckedModeBanner: false,
     );
@@ -104,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton(    //floating action button takes accentColor by default otherwise primaryColor
         onPressed: () {},
         child: IconButton(
           icon: Icon(Icons.add),
