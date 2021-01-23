@@ -76,7 +76,8 @@ flutter:
     - family: BodoniModa
       fonts:
         - asset: fonts/BodoniModa-VariableFont.ttf 
-        - asset: fonts/BodoniModa-Italic.ttf   
+        - asset: fonts/BodoniModa-Italic.ttf  
+          style: italic 
         
              
   

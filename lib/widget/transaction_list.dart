@@ -45,6 +45,7 @@ class TransactionList extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
                         ),
                       ),
                     ),

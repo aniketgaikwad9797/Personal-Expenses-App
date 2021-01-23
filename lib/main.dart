@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
                   fontFamily: 'BodoniModa',
-                  fontStyle: FontStyle.normal    ,
+                  fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                   color: Colors.black,
@@ -36,8 +36,6 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
-  
 }
 
 /*Adding comments here*/
@@ -106,16 +104,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
-              width: double.infinity,
-              child: Card(
-                child: Text(
-                  "The main chart",
-                ),
-                elevation: 10,
-                color: Colors.amberAccent,
-              ),
-            ),
             TransactionList(_userTransactions),
           ],
         ),
