@@ -15,11 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Personal Expenses",   //this is the title that appears when app is in background
       home: MyHomePage(),
-      theme: ThemeData(
-        primarySwatch: Colors.orange, 
+      theme: ThemeData(                   //ThemeData is not a widget but a class provided by flutter
+        primarySwatch: Colors.orange,    //alternate is primaryColor but only one shade 
         accentColor: Colors.cyanAccent, 
-        fontFamily: 'Ouicksand-Light'  //alternate is primaryColor but only on shade 
-      ),         //ThemeData is not a widget but a class provided by flutter
+        fontFamily: 'OpenSans',
+        textTheme: ThemeData.light().textTheme.copyWith(caption:  TextStyle(fontFamily: 'OpenSans',),
+      ),        
+      ),
       debugShowCheckedModeBanner: false,
     );
   }
