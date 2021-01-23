@@ -13,18 +13,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Personal Expenses",   //this is the title that appears when app is in background
+      title:
+          "Personal Expenses", //this is the title that appears when app is in background
       home: MyHomePage(),
-      theme: ThemeData(                   //ThemeData is not a widget but a class provided by flutter
-        primarySwatch: Colors.orange,    //alternate is primaryColor but only one shade 
-        accentColor: Colors.cyanAccent, 
+      theme: ThemeData(
+        //ThemeData is not a widget but a class provided by flutter
+        primarySwatch:
+            Colors.orange, //alternate is primaryColor but only one shade
+        accentColor: Colors.cyanAccent,
         fontFamily: 'OpenSans',
-        textTheme: ThemeData.light().textTheme.copyWith(headline6:  TextStyle(fontFamily: 'OpenSans',),
-      ),        
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
+              ),
+        ),
       ),
-      debugShowCheckedModeBanner: false,
     );
   }
+
+  
 }
 
 /*Adding comments here*/
@@ -107,7 +119,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(    //floating action button takes accentColor by default otherwise primaryColor
+      floatingActionButton: FloatingActionButton(
+        //floating action button takes accentColor by default otherwise primaryColor
         onPressed: () {},
         child: IconButton(
           icon: Icon(Icons.add),
