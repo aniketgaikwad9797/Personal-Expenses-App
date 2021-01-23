@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch:
             Colors.orange, //alternate is primaryColor but only one shade
         accentColor: Colors.cyanAccent,
-        fontFamily: 'OpenSans',
+        fontFamily: 'BodoniModa',
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
