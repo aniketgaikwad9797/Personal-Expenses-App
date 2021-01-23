@@ -75,7 +75,7 @@ flutter:
           weight: 700
     - family: BodoniModa
       fonts:
-        - asset: fonts/BodiniModa-VariableFont.ttf 
+        - asset: fonts/BodoniModa-VariableFont.ttf 
         - asset: fonts/BodoniModa-Italic.ttf   
         
              
