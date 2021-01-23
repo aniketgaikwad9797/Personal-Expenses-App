@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       title: "Personal Expenses",   //this is the title that appears when app is in background
       home: MyHomePage(),
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.orange, 
+        accentColor: Colors.cyanAccent,   //alternate is primaryColor but only on shade 
       ),         //ThemeData is not a widget but a class provided by flutter
       debugShowCheckedModeBanner: false,
     );
