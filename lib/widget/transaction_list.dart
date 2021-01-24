@@ -9,7 +9,7 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 300,
-      child: 
+      child:
       ListView.builder(
         itemBuilder: (context, index) {
           return Card(
