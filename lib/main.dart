@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
               fontFamily: 'BodoniModa',
               fontWeight: FontWeight.bold,
               fontSize: 18,
-              fontStyle: FontStyle.italic,
+              fontStyle: FontStyle.normal,
             )),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
