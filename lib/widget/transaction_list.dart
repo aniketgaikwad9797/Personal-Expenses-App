@@ -11,10 +11,6 @@ class TransactionList extends StatelessWidget {
       height: 300,
       child: ListView.builder(
         itemBuilder: (context, index) {
-          if (transactions.length==0) {
-            print(transactions.length);
-            return Container(child: Text("Waiting for transactions!"));
-          } else {
             return Card(
               child: Row(
                 children: [
@@ -62,9 +58,8 @@ class TransactionList extends StatelessWidget {
                 ],
               ),
             );
-          }
         },
-        itemCount: 1,
+        itemCount: transactions.length,
         //children: transactions.map((tx) {
         // return ).toList(), //map() method is used to convert list of objects into list of widgets
         //toList() is used bcoz map() function will always give us a iterable
