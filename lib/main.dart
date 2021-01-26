@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'BodoniModa',
         textTheme: ThemeData.light().textTheme.copyWith(
               headline6: TextStyle(
-              fontFamily: 'BodoniModa',
+              fontFamily: 'HachiMaruPop',
               fontWeight: FontWeight.bold,
               fontSize: 18,
               fontStyle: FontStyle.normal,
