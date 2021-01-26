@@ -8,16 +8,18 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //color: Colors.blueAccent,
       height: 300,
+      width: double.infinity,
       child: transactions.isEmpty
           ? Column(
             crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "No transaction added yet!!",
+                  "No transactions added yet!!",
                   style: Theme.of(context).textTheme.headline6,
                 ),
-                SizedBox(height: 15,),
+                SizedBox(height: 20,),
                 Container(
                   height: 200,
                   child: Image.asset(
