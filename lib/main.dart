@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyanAccent,
         fontFamily: 'BodoniModa',
         textTheme: ThemeData.light().textTheme.copyWith(
-              headline6  : TextStyle(
+                headline6: TextStyle(
               fontFamily: 'HachiMaruPop',
               fontWeight: FontWeight.bold,
               fontSize: 18,
@@ -57,7 +57,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
-   Transaction(
+    Transaction(
       id: "1",
       name: "Clothes",
       amount: 1200,
@@ -70,6 +70,16 @@ class _MyHomePageState extends State<MyHomePage> {
       date: DateTime.now(),
     ),
   ];
+
+  List<Transaction> get _recentTransaction {
+    return _userTransactions.where((tx) {
+      return tx.date.isAfter(
+        DateTime.now().subtract(
+          Duration(days: 7),
+        ),
+      );
+    }).toList();
+  }
 
   void _addNewTransaction(String transactionTitle, double transactionAmount) {
     final newTransaction = Transaction(
@@ -113,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //mainAxisAlignment: MainAxisAlignment.spaceEvenl,
           //crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Chart(_userTransactions),
+            Chart(_recentTransaction),
             TransactionList(_userTransactions),
           ],
         ),
