@@ -1,8 +1,8 @@
-import 'package:PersonalExpenses/widget/transaction_list.dart';
-
+import './widget/transaction_list.dart';
 import './widget/new_transaction.dart';
 import 'package:flutter/material.dart';
 import './models/transaction.dart';
+import './widget/chart.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,18 +24,18 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyanAccent,
         fontFamily: 'BodoniModa',
         textTheme: ThemeData.light().textTheme.copyWith(
-              headline6: TextStyle(
+              headline6  : TextStyle(
               fontFamily: 'HachiMaruPop',
               fontWeight: FontWeight.bold,
               fontSize: 18,
-              fontStyle: FontStyle.normal,
+              //fontStyle: FontStyle.normal,
             )),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
                   fontFamily: 'BodoniModa',
                   fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.w700,
                   fontSize: 20,
                   color: Colors.black,
                 ),
@@ -113,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //mainAxisAlignment: MainAxisAlignment.spaceEvenl,
           //crossAxisAlignment: CrossAxisAlignment.end,
           children: [
+            Chart(_userTransactions),
             TransactionList(_userTransactions),
           ],
         ),

@@ -77,10 +77,10 @@ flutter:
       fonts:
         - asset: assets/fonts/BodoniModa-VariableFont.ttf 
         - asset: assets/fonts/BodoniModa-Italic.ttf  
-    - family: Hachi Maru Pop
+    - family: HachiMaruPop
       fonts:
         - asset: assets/fonts/HachiMaruPop-Regular.ttf    
-             
+          style: normal   
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
