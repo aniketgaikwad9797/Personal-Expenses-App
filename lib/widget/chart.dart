@@ -29,12 +29,14 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(groupedTransactionValues);
+    //print(groupedTransactionValues);
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
       child: Row(
-        children: [],
+        children: groupedTransactionValues.map((data) {
+          return Text("${data["day"]}: ${data["amount"]} ");
+        }).toList(),
       ),
     );
   }
