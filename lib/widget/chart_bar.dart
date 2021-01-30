@@ -10,7 +10,7 @@ class ChartBar extends StatelessWidget {
     return Column(
       children: [
         Text(
-          spedingAmount.toStringAsFixed(0),
+          spedingAmount.toStringAsFixed(0)+"rs",
         ),
         SizedBox(
           height: 4,
