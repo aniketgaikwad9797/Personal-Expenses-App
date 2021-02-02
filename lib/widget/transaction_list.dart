@@ -37,8 +37,11 @@ class TransactionList extends StatelessWidget {
                 return Card(
                   elevation: 6,
                   child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.yellowAccent[100],
+                    leading: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.purpleAccent),
+                      height: 60,
+                      width: 60,
                       //foregroundColor: Colors.black,
                       child: FittedBox(
                         child: Text(
@@ -47,7 +50,6 @@ class TransactionList extends StatelessWidget {
                           style: TextStyle(color: Colors.indigoAccent),
                         ),
                       ),
-                      radius: 55,
                     ),
                     title: Text(
                       transactions[index].name,

@@ -24,12 +24,14 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyanAccent,
         fontFamily: 'BodoniModa',
         textTheme: ThemeData.light().textTheme.copyWith(
-                headline6: TextStyle(
-              fontFamily: 'HachiMaruPop',
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-              //fontStyle: FontStyle.normal,
-            )),
+              headline6: TextStyle(
+                fontFamily: 'HachiMaruPop',
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+                //fontStyle: FontStyle.normal,
+              ),
+              button: TextStyle(color: Colors.white),
+            ),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
