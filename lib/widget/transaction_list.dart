@@ -38,12 +38,13 @@ class TransactionList extends StatelessWidget {
                   elevation: 6,
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: Colors.red[100],
+                      backgroundColor: Colors.yellowAccent[100],
                       //foregroundColor: Colors.black,
                       child: FittedBox(
                         child: Text(
                           "Rs: " +
                               transactions[index].amount.toStringAsFixed(0),
+                          style: TextStyle(color: Colors.indigoAccent),
                         ),
                       ),
                       radius: 55,
