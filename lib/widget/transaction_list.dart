@@ -13,13 +13,15 @@ class TransactionList extends StatelessWidget {
       width: double.infinity,
       child: transactions.isEmpty
           ? Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "No transactions added yet!!",
                   style: Theme.of(context).textTheme.headline6,
                 ),
-                SizedBox(height: 40,),
+                SizedBox(
+                  height: 40,
+                ),
                 Container(
                   height: 200,
                   child: Image.asset(
@@ -29,10 +31,34 @@ class TransactionList extends StatelessWidget {
                   ),
                 ),
               ],
-          )
+            )
           : ListView.builder(
               itemBuilder: (context, index) {
                 return Card(
+                  elevation: 6,
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.red[100],
+                      //foregroundColor: Colors.black,
+                      child: FittedBox(
+                        child: Text(
+                          "Rs: " +
+                              transactions[index].amount.toStringAsFixed(0),
+                        ),
+                      ),
+                      radius: 55,
+                    ),
+                    title: Text(
+                      transactions[index].name,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    subtitle: Text(
+                      DateFormat.yMMMd().format(transactions[index].date),
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
+                );
+                /*Card(
                   elevation: 6,
                   child: Row(
                     children: [
@@ -80,7 +106,7 @@ class TransactionList extends StatelessWidget {
                       ),
                     ],
                   ),
-                );
+                );*/
               },
               itemCount: transactions.length,
               //children: transactions.map((tx) {
