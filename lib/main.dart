@@ -93,14 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
       date: selectedDate,
     );
 
-    void deleteTransaction(String id) {
-      setState(() {
-        _userTransactions.removeWhere((transaction) {
-          return transaction.id == id;
-        });
-      });
-    }
-
     setState(() {
       _userTransactions.add(newTransaction);
     });
@@ -112,6 +104,14 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (bctx) {
           return NewTransaction(_addNewTransaction);
         });
+  }
+
+  void _deleteTransaction(String id) {
+    setState(() {
+      _userTransactions.removeWhere((transaction) {
+        return transaction.id == id;
+      });
+    });
   }
 
   final titleController = TextEditingController();
@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Chart(_recentTransaction),
-            TransactionList(_userTransactions,deletedTransaction),
+            TransactionList(_userTransactions, _deleteTransaction),
           ],
         ),
       ),
