@@ -19,11 +19,13 @@ class _NewTransactionState extends State<NewTransaction> {
     final enteredText = titleController.text;
     final enteredAmount = double.parse(amountController.text);
 
-    if (enteredText.isEmpty || enteredAmount < 0) return;
+    if (enteredText.isEmpty || enteredAmount < 0 || selectedDate == null)
+      return;
 
     widget.newTx(
       enteredText,
       enteredAmount,
+      selectedDate,
     );
 
     Navigator.of(context).pop();
@@ -49,7 +51,7 @@ class _NewTransactionState extends State<NewTransaction> {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
@@ -76,9 +78,11 @@ class _NewTransactionState extends State<NewTransaction> {
               height: 60,
               child: Row(
                 children: [
-                  Text(selectedDate == null
-                      ? "No date Choosen!"
-                      : DateFormat.yMd().format(selectedDate)),
+                  Expanded(
+                    child: Text(selectedDate == null
+                        ? "No date Choosen!"
+                        : "Picked Date: ${DateFormat.yMd().format(selectedDate)}"),
+                  ),
                   FlatButton(
                     onPressed: _presentDatePicker,
                     child: Text(
